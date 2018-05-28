@@ -1,0 +1,83 @@
+/**
+ * Overwrite default styling to add Whitenode/Whitecoin 2018 theme
+ */
+
+
+/**
+ * Overwrites
+ */
+@import url('https://fonts.googleapis.com/css?family=Roboto|Ubuntu');
+
+
+body, p {
+    font-family: 'Roboto', sans-serif;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+/**
+ * Sidebar
+ */
+
+.sidebar {
+    box-shadow: 0px 0px 90px 0px rgba(3, 34, 71, 0.08);
+}
+
+.sidebar .sidebar-wrapper {
+    box-shadow: none;
+}
+
+.sidebar .logo {
+    background: #8148d0;
+    margin: 0;
+    padding: 30.5px 0;
+    border-bottom: 0;
+}
+
+.sidebar .logo a {
+    color: #ffffff!important;
+}
+
+.sidebar .nav {
+    background: linear-gradient(rgba(0, 0, 0, 0), 20%, #f7f9fa);
+    margin-top: 0;
+}
+
+.sidebar .nav p {
+    font-family: 'Ubuntu', sans-serif;
+    color: #292a2b;
+}
+
+.sidebar .nav li.active {
+    box-shadow: 0px 6px 18px 0px rgba(3, 34, 71, 0.1);
+}
+
+.sidebar .nav li.active > a::before,
+.sidebar .nav li.active > a::after {
+    display: none!important;
+}
+
+.sidebar .nav li {
+    border-bottom: 1px solid #e4e9ee;
+}
+
+.sidebar .nav li:not(.active) > a, .sidebar[data-background-color="white"] .nav li:not(.active) > a, .off-canvas-sidebar .nav li:not(.active) > a, .off-canvas-sidebar[data-background-color="white"] .nav li:not(.active) > a {
+    color: #bbc2c8;
+}
+
+
+/**
+ * Main
+ */
+.main-panel {
+    background-color: #f2f5f9;
+    display: none;
+}

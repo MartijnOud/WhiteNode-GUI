@@ -22,6 +22,9 @@
     <!--  WhiteNode base CSS    -->
     <link href="/Assets/css/whitenode_base.css" rel="stylesheet"/>
 
+    <!--  2018 Theme CSS    -->
+    <link href="/Assets/css/whitenode_theme_2018.css" rel="stylesheet"/>
+
 
     <!--  CSS    -->
     <link href="/Assets/css/style.css" rel="stylesheet" />
