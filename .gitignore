@@ -4,6 +4,7 @@
 .idea
 .sass-cache
 .svn
+sftp-config.json
 
 _notes
 assets/bower_components
