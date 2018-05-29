@@ -8,6 +8,10 @@
  */
 @import url('https://fonts.googleapis.com/css?family=Roboto|Ubuntu');
 
+body {
+    /* for overscroll */
+    background-color: #f2f5f9;
+}
 
 body, p {
     font-family: 'Roboto', sans-serif;
@@ -22,12 +26,23 @@ h6 {
     font-family: 'Ubuntu', sans-serif;
 }
 
+a:hover,
+.navbar-default .navbar-nav > li > a:not(.btn):hover {
+    color: #9748e3;
+}
+
 
 /**
  * Sidebar
  */
 
+.sidebar,
+.sidebar .sidebar-wrapper {
+    width: 316px;
+}
+
 .sidebar {
+    z-index: 2;
     box-shadow: 0px 0px 90px 0px rgba(3, 34, 71, 0.08);
 }
 
@@ -53,11 +68,14 @@ h6 {
 
 .sidebar .nav p {
     font-family: 'Ubuntu', sans-serif;
+    text-transform: none;
     color: #292a2b;
 }
 
-.sidebar .nav li.active {
+.sidebar .nav li.active,
+.sidebar .nav li:hover {
     box-shadow: 0px 6px 18px 0px rgba(3, 34, 71, 0.1);
+    transition: all .3s ease-in-out;
 }
 
 .sidebar .nav li.active > a::before,
@@ -67,10 +85,28 @@ h6 {
 
 .sidebar .nav li {
     border-bottom: 1px solid #e4e9ee;
+    padding: 10px 0;
 }
 
-.sidebar .nav li:not(.active) > a, .sidebar[data-background-color="white"] .nav li:not(.active) > a, .off-canvas-sidebar .nav li:not(.active) > a, .off-canvas-sidebar[data-background-color="white"] .nav li:not(.active) > a {
+.sidebar .nav li:nth-last-child(1) {
+    /* Discord widget */
+    border-bottom: 0px;
+    padding: 0;
+}
+
+.sidebar[data-active-color="danger"] .nav li.active > a,
+.sidebar .nav li:not(.active) > a,
+.sidebar[data-background-color="white"] .nav li:not(.active) > a,
+.off-canvas-sidebar .nav li:not(.active) > a {
     color: #bbc2c8;
+}
+
+.sidebar .nav li a {
+    margin: 0; /* control via li) */
+}
+
+.sidebar .nav li i {
+    margin-right: 25px;
 }
 
 
@@ -78,6 +114,44 @@ h6 {
  * Main
  */
 .main-panel {
-    background-color: #f2f5f9;
-    display: none;
+    background: #f2f5f9;
+    padding: 0 40px;
+    z-index: 1;
+}
+
+@media (min-width: 991px) {
+    .main-panel {
+        width: calc(100% - 316px); /* match .sidebar */
+    }
+}
+
+
+.main-panel > .content {
+    padding: 40px 0;
+}
+.main-panel .container-fluid {
+    background: #f2f5f9;
+}
+
+.main-panel .row {
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navbar .navbar-brand {
+    font-family: 'Ubuntu', sans-serif;
+    font-weight: lighter;
+    font-size: 30px;
+    text-transform: none;
+    color: #292a2b;
+}
+
+.card {
+    box-shadow: 0px 6px 18px 0px rgba(3, 34, 71, 0.1);
+    border-radius: 5px;
+}
+
+.card:hover {
+    transition: all .3s ease-in-out;
+    box-shadow: 0px 12px 18px 0px rgba(3, 34, 71, 0.1)
 }
